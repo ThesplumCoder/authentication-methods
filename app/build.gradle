@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'war'
 }
 
 repositories {
@@ -21,6 +22,8 @@ dependencies {
 
     // This dependency is used by the application.
     implementation libs.guava
+
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.1.0'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
